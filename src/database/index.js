@@ -1,4 +1,5 @@
 'use strict';
+const { reject } = require('lodash');
 const _ = require('lodash');
 const db = require('./db.js');
 
@@ -9,8 +10,16 @@ const db = require('./db.js');
 const mockDBCall = (dataAccessMethod) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(dataAccessMethod());
+            resolve(({
+                success: true,
+                data: dataAccessMethod()
+            }));
         }, 500);
+    }).catch(error => {
+        Promise.resolve(({
+            success: false,
+            data: error
+        }));
     });
 };
 

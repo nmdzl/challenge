@@ -3,7 +3,7 @@ body {
 }
 section {
     display: block;
-    max-width: 1200px;
+    width: 480px;
     margin: 0 auto;
     margin-bottom: 60px;
 }

@@ -2,8 +2,15 @@
 const mockDBCalls = require('../database/index.js');
 
 const getUsersHandler = async (request, response) => {
-    const data = await mockDBCalls.getUsers();
-    return response.status(200).send(JSON.stringify(data));
+    try {
+        const data = await mockDBCalls.getUsers();
+        if (data.success) {
+            return response.status(200).send(JSON.stringify(data.data));
+        }
+        throw Error(data.data);
+    } catch (error) {
+        return response.status(500).send(error.message);
+    }
 };
 
 module.exports = (app) => {

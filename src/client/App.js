@@ -27,7 +27,7 @@ function App () {
                 <Table cols={['username', 'age']} fetchMethod={fetchMethodUsers}></Table>
             </section>
             <section className="outline" id="agedem">
-                <h1>Age Demographic of Users With ___</h1>
+                <h1>Age Demographic of Users With</h1>
                 <Select fetchMethod={getFetchMethod('/items')} onChangeHandler={itemSelectOnChangeHandler}></Select>
                 <Table cols={['age', 'count']} fetchMethod={item ? getFetchMethod('/users/age/' + item) : null}></Table>
             </section>
