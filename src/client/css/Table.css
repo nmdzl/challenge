@@ -1,0 +1,35 @@
+table {
+    margin: 0 10px;
+}
+thead, tbody, tr {
+    display: block;
+    text-align: left;
+}
+thead, tr {
+    border-bottom: 1px solid rgb(194, 194, 194);
+}
+thead {
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 0 3px rgb(68, 68, 68);
+}
+tbody {
+    border-left: 1px solid rgb(194, 194, 194);
+    border-right: 1px solid rgb(194, 194, 194);
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 0 3px rgb(194, 194, 194);
+}
+th, td {
+    width: 200px;
+}
+
+th {
+    font-size: 18px;
+}
+td {
+    font-size: 15px;
+}
+
+thead {
+    background-color: black;
+    color: white;
+}
