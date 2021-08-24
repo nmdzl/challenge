@@ -1,13 +1,16 @@
 import React from 'react';
 import { useEffect, useState } from "react";
+import '../css/Table.css';
 
 function Table (props) {
     const cols = props.cols;
-    const fetchData = props.fetchData;
+    const fetchMethod = props.fetchMethod;
     const [data, setData] = useState([]);
     useEffect(() => {
-        fetchData().then(data => setData(data));
-    }, []);
+        if (fetchMethod) {
+            fetchMethod().then(data => setData(data));
+        }
+    }, [fetchMethod]);
     const makeInitialCapital = word => {
         return word[0].toUpperCase() + word.substring(1);
     }
@@ -21,7 +24,7 @@ function Table (props) {
             <tbody>
                 {data.map((row, ind) => (
                     <tr key={ind}>
-                        {cols.map(col => <th key={`${ind}_${col}`}>{row[col]}</th>)}
+                        {cols.map(col => <td key={`${ind}_${col}`}>{row[col]}</td>)}
                     </tr>
                 ))}
             </tbody>

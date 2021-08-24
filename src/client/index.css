@@ -1,7 +1,9 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 section {
     display: block;
-}
-section.outline {
     max-width: 1200px;
-    margin: 0 20px;
+    margin: 0 auto;
+    margin-bottom: 60px;
 }

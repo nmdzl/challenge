@@ -1,0 +1,17 @@
+select {
+    background-color: rgb(0, 133, 177);
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid gray;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+option {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+}
